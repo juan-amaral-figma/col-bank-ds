@@ -1,0 +1,585 @@
+[
+  {
+    "name": "Button",
+    "source": "src/components/atoms/Button/Button.tsx",
+    "properties": [
+      {
+        "name": "Etiqueta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Jerarquía",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Primario",
+          "Secundario",
+          "Terciario"
+        ]
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "Deshabilitado",
+          "Cargando"
+        ]
+      },
+      {
+        "name": "Tamaño",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Pequeño",
+          "Mediano",
+          "Grande"
+        ]
+      }
+    ],
+    "dependencies": [],
+    "figmaName": "Botón",
+    "nodeId": "19:97"
+  },
+  {
+    "name": "IconButton",
+    "source": "src/components/atoms/IconButton/IconButton.tsx",
+    "properties": [
+      {
+        "name": "Ícono",
+        "type": "INSTANCE_SWAP"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "Deshabilitado"
+        ]
+      },
+      {
+        "name": "Tamaño",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Pequeño",
+          "Mediano"
+        ]
+      }
+    ],
+    "dependencies": [
+      "Icon"
+    ],
+    "figmaName": "BotónConÍcono",
+    "nodeId": "19:113"
+  },
+  {
+    "name": "TextInput",
+    "source": "src/components/atoms/TextInput/TextInput.tsx",
+    "properties": [
+      {
+        "name": "Etiqueta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Sugerencia",
+        "type": "TEXT"
+      },
+      {
+        "name": "Texto de ayuda",
+        "type": "TEXT"
+      },
+      {
+        "name": "Mostrar ayuda",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "En foco",
+          "Error",
+          "Deshabilitado"
+        ]
+      }
+    ],
+    "dependencies": [
+      "Icon"
+    ],
+    "figmaName": "CampoDeTexto",
+    "nodeId": "19:143"
+  },
+  {
+    "name": "Checkbox",
+    "source": "src/components/atoms/Checkbox/Checkbox.tsx",
+    "properties": [
+      {
+        "name": "Etiqueta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Mostrar etiqueta",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Sin marcar",
+          "Marcado",
+          "Deshabilitado"
+        ]
+      }
+    ],
+    "dependencies": [
+      "Icon"
+    ],
+    "figmaName": "CasillaDeVerificación",
+    "nodeId": "19:158"
+  },
+  {
+    "name": "RadioButton",
+    "source": "src/components/atoms/RadioButton/RadioButton.tsx",
+    "properties": [
+      {
+        "name": "Etiqueta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Mostrar etiqueta",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Sin seleccionar",
+          "Seleccionado",
+          "Deshabilitado"
+        ]
+      }
+    ],
+    "dependencies": [],
+    "figmaName": "BotónDeOpción",
+    "nodeId": "19:172"
+  },
+  {
+    "name": "Badge",
+    "source": "src/components/atoms/Badge/Badge.tsx",
+    "properties": [
+      {
+        "name": "Etiqueta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Tono",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Éxito",
+          "Error",
+          "Neutral"
+        ]
+      }
+    ],
+    "dependencies": [
+      "Icon"
+    ],
+    "figmaName": "Insignia",
+    "nodeId": "19:186"
+  },
+  {
+    "name": "Icon",
+    "source": "src/components/atoms/Icon/Icon.tsx",
+    "properties": [
+      {
+        "name": "Nombre",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Inicio",
+          "Transferencia",
+          "Billetera",
+          "Tarjeta de crédito",
+          "Buscar",
+          "Notificación",
+          "Flecha",
+          "Marca de verificación",
+          "Cerrar",
+          "Ojo"
+        ]
+      }
+    ],
+    "dependencies": [],
+    "figmaName": "Ícono",
+    "nodeId": "19:30"
+  },
+  {
+    "name": "Divider",
+    "source": "src/components/atoms/Divider/Divider.tsx",
+    "properties": [
+      {
+        "name": "Orientación",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Horizontal",
+          "Vertical"
+        ]
+      }
+    ],
+    "dependencies": [],
+    "figmaName": "Separador",
+    "nodeId": "19:192"
+  },
+  {
+    "name": "AccountCard",
+    "source": "src/components/molecules/AccountCard/AccountCard.tsx",
+    "properties": [
+      {
+        "name": "Tipo de cuenta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Número de cuenta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Saldo",
+        "type": "TEXT"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "Saldo oculto"
+        ]
+      }
+    ],
+    "dependencies": [
+      "Icon",
+      "IconButton",
+      "Divider"
+    ],
+    "figmaName": "TarjetaDeCuenta",
+    "nodeId": "44:552"
+  },
+  {
+    "name": "TransactionItem",
+    "source": "src/components/molecules/TransactionItem/TransactionItem.tsx",
+    "properties": [
+      {
+        "name": "Nombre del movimiento",
+        "type": "TEXT"
+      },
+      {
+        "name": "Fecha",
+        "type": "TEXT"
+      },
+      {
+        "name": "Monto",
+        "type": "TEXT"
+      },
+      {
+        "name": "Mostrar estado",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "Dirección",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Entrada",
+          "Salida"
+        ]
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Completado",
+          "Pendiente"
+        ]
+      }
+    ],
+    "dependencies": [
+      "Icon",
+      "Badge"
+    ],
+    "figmaName": "ElementoDeMovimiento",
+    "nodeId": "44:597"
+  },
+  {
+    "name": "RecipientCard",
+    "source": "src/components/molecules/RecipientCard/RecipientCard.tsx",
+    "properties": [
+      {
+        "name": "Iniciales",
+        "type": "TEXT"
+      },
+      {
+        "name": "Nombre del destinatario",
+        "type": "TEXT"
+      },
+      {
+        "name": "Banco",
+        "type": "TEXT"
+      },
+      {
+        "name": "Número de cuenta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "Seleccionado"
+        ]
+      }
+    ],
+    "dependencies": [
+      "RadioButton"
+    ],
+    "figmaName": "TarjetaDeDestinatario",
+    "nodeId": "44:622"
+  },
+  {
+    "name": "QuickAction",
+    "source": "src/components/molecules/QuickAction/QuickAction.tsx",
+    "properties": [
+      {
+        "name": "Etiqueta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "Deshabilitado"
+        ]
+      }
+    ],
+    "dependencies": [
+      "IconButton"
+    ],
+    "figmaName": "AcciónRápida",
+    "nodeId": "44:640"
+  },
+  {
+    "name": "AmountField",
+    "source": "src/components/molecules/AmountField/AmountField.tsx",
+    "properties": [
+      {
+        "name": "Moneda",
+        "type": "TEXT"
+      },
+      {
+        "name": "Etiqueta",
+        "type": "TEXT"
+      },
+      {
+        "name": "Texto de ayuda",
+        "type": "TEXT"
+      },
+      {
+        "name": "Monto",
+        "type": "TEXT"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "En foco",
+          "Error",
+          "Deshabilitado"
+        ]
+      }
+    ],
+    "dependencies": [
+      "TextInput"
+    ],
+    "figmaName": "CampoDeMonto",
+    "nodeId": "44:690"
+  },
+  {
+    "name": "SearchField",
+    "source": "src/components/molecules/SearchField/SearchField.tsx",
+    "properties": [
+      {
+        "name": "Sugerencia",
+        "type": "TEXT"
+      },
+      {
+        "name": "Valor",
+        "type": "TEXT"
+      },
+      {
+        "name": "Mostrar borrado",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "En foco",
+        "type": "VARIANT",
+        "variantOptions": [
+          "No",
+          "Sí"
+        ]
+      },
+      {
+        "name": "Tiene valor",
+        "type": "VARIANT",
+        "variantOptions": [
+          "No",
+          "Sí"
+        ]
+      }
+    ],
+    "dependencies": [
+      "Icon",
+      "IconButton"
+    ],
+    "figmaName": "CampoDeBúsqueda",
+    "nodeId": "44:727"
+  },
+  {
+    "name": "AccountOverview",
+    "source": "src/components/organisms/AccountOverview/AccountOverview.tsx",
+    "properties": [
+      {
+        "name": "Encabezado",
+        "type": "TEXT"
+      },
+      {
+        "name": "Saldo",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Visible",
+          "Oculto"
+        ]
+      }
+    ],
+    "dependencies": [
+      "AccountCard"
+    ],
+    "figmaName": "ResumenDeCuentas",
+    "nodeId": "68:344"
+  },
+  {
+    "name": "QuickActionsPanel",
+    "source": "src/components/organisms/QuickActionsPanel/QuickActionsPanel.tsx",
+    "properties": [
+      {
+        "name": "Encabezado",
+        "type": "TEXT"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "Deshabilitado"
+        ]
+      }
+    ],
+    "dependencies": [
+      "QuickAction"
+    ],
+    "figmaName": "PanelDeAccionesRápidas",
+    "nodeId": "68:425"
+  },
+  {
+    "name": "TransactionHistory",
+    "source": "src/components/organisms/TransactionHistory/TransactionHistory.tsx",
+    "properties": [
+      {
+        "name": "Encabezado",
+        "type": "TEXT"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Reciente",
+          "Vacío"
+        ]
+      }
+    ],
+    "dependencies": [
+      "SearchField",
+      "TransactionItem"
+    ],
+    "figmaName": "HistorialDeMovimientos",
+    "nodeId": "68:497"
+  },
+  {
+    "name": "TransactionFilters",
+    "source": "src/components/organisms/TransactionFilters/TransactionFilters.tsx",
+    "properties": [
+      {
+        "name": "Seleccionado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Todos",
+          "Entradas",
+          "Salidas",
+          "Pendientes"
+        ]
+      }
+    ],
+    "dependencies": [
+      "Icon",
+      "Button"
+    ],
+    "figmaName": "FiltrosDeMovimientos",
+    "nodeId": "68:556"
+  },
+  {
+    "name": "RecipientSelector",
+    "source": "src/components/organisms/RecipientSelector/RecipientSelector.tsx",
+    "properties": [
+      {
+        "name": "Encabezado",
+        "type": "TEXT"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "Seleccionado",
+          "Vacío"
+        ]
+      }
+    ],
+    "dependencies": [
+      "SearchField",
+      "RecipientCard"
+    ],
+    "figmaName": "SelectorDeDestinatarios",
+    "nodeId": "68:646"
+  },
+  {
+    "name": "TransferForm",
+    "source": "src/components/organisms/TransferForm/TransferForm.tsx",
+    "properties": [
+      {
+        "name": "Encabezado",
+        "type": "TEXT"
+      },
+      {
+        "name": "Estado",
+        "type": "VARIANT",
+        "variantOptions": [
+          "Predeterminado",
+          "Error",
+          "Listo"
+        ]
+      }
+    ],
+    "dependencies": [
+      "RecipientCard",
+      "AmountField",
+      "Button"
+    ],
+    "figmaName": "FormularioDeTransferencia",
+    "nodeId": "68:765"
+  }
+]

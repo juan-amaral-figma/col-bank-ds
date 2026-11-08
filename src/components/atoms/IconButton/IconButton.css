@@ -1,0 +1,12 @@
+.col-icon-button {
+  padding: var(--col-spacing-2);
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  flex: none;
+}
+.col-icon-button.col-button--md {
+  padding: var(--col-spacing-3);
+  width: 48px;
+  height: 48px;
+}

@@ -1,0 +1,13 @@
+.col-divider {
+  flex: none;
+  background: var(--col-border-primary);
+}
+.col-divider--horizontal {
+  width: 100%;
+  height: 1px;
+}
+.col-divider--vertical {
+  width: 1px;
+  height: 64px;
+  align-self: stretch;
+}

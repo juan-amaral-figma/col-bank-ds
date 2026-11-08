@@ -1,0 +1,25 @@
+.col-search-field {
+  width: 400px;
+}
+.col-search-field > label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.col-search-field .col-input-shell {
+  min-height: 56px;
+  padding: var(--col-spacing-2);
+  gap: var(--col-spacing-3);
+}
+.col-search-field input {
+  height: 38px;
+}
+.col-search-field input::-webkit-search-cancel-button {
+  appearance: none;
+}

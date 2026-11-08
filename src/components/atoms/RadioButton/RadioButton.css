@@ -1,0 +1,14 @@
+.col-radio-dot {
+  position: absolute;
+  pointer-events: none;
+  color: var(--col-text-on-brand);
+  display: none;
+}
+.col-radio-dot {
+  top: 7px;
+  left: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--col-text-on-brand);
+}

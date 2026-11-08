@@ -1,0 +1,9 @@
+.col-icon {
+  display: inline-block;
+  flex: none;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  vertical-align: middle;
+}

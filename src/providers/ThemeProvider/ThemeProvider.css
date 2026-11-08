@@ -1,0 +1,6 @@
+.col-theme {
+  color: var(--col-text-primary);
+  background: var(--col-surface-primary);
+  font: 400 16px/24px var(--col-font-family);
+  letter-spacing: 0;
+}

@@ -1,0 +1,18 @@
+.col-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--col-spacing-4);
+  padding: var(--col-spacing-4);
+  border-radius: var(--col-radius-xl);
+  width: 390px;
+  max-width: 100%;
+  min-width: 0;
+  background: var(--col-surface-primary);
+  color: var(--col-text-primary);
+  font: 400 16px/24px var(--col-font-family);
+}
+.col-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--col-spacing-2);
+}

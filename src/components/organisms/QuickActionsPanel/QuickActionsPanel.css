@@ -1,0 +1,13 @@
+.col-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--col-spacing-2);
+}
+.col-actions-grid .col-quick-action {
+  width: 100%;
+}
+@media (max-width: 360px) {
+  .col-actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,46 @@
+.col-transaction {
+  color: var(--col-text-primary);
+  background: var(--col-surface-primary);
+  border: 1px solid var(--col-border-primary);
+  border-radius: var(--col-radius-lg);
+  padding: var(--col-spacing-4);
+  max-width: 100%;
+  font: 400 16px/24px var(--col-font-family);
+}
+.col-transaction {
+  display: flex;
+  align-items: center;
+  gap: var(--col-spacing-3);
+  width: 400px;
+  min-width: 0;
+}
+.col-transaction .col-grow > :first-child {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.col-transaction-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--col-spacing-2);
+  flex: 0 1 136px;
+  min-width: 0;
+}
+.col-transaction-amount {
+  font-variant-numeric: tabular-nums;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+@media (max-width: 360px) {
+  .col-transaction {
+    flex-wrap: wrap;
+  }
+  .col-transaction-meta {
+    flex: 1 1 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

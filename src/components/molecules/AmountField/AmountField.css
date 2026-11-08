@@ -1,0 +1,62 @@
+.col-amount-field,
+.col-amount-composition {
+  width: 364px;
+  max-width: 100%;
+}
+.col-amount-shell {
+  border: 0;
+  padding: 0;
+  gap: var(--col-spacing-2);
+  background: transparent;
+}
+.col-amount-shell input {
+  border: 1px solid var(--col-border-primary);
+  padding: var(--col-spacing-3);
+  border-radius: var(--col-radius-md);
+  height: 48px;
+  background: var(--col-surface-primary);
+}
+.col-currency {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--col-spacing-2);
+  min-width: 56px;
+  height: 48px;
+  border: 1px solid var(--col-border-primary);
+  border-radius: var(--col-radius-md);
+  background: var(--col-surface-primary);
+  flex: none;
+}
+.col-amount-shell:focus-within {
+  box-shadow: none;
+}
+.col-amount-shell input:focus {
+  border-color: var(--col-brand-primary);
+  box-shadow: 0 0 0 1px var(--col-brand-primary);
+}
+.col-field[data-error] .col-amount-shell input {
+  border-color: var(--col-status-error);
+}
+.col-field[data-disabled] .col-amount-shell {
+  background: transparent;
+}
+.col-field[data-disabled] .col-amount-shell input {
+  background: var(--col-surface-secondary);
+}
+.col-amount-composition {
+  display: flex;
+  flex-direction: column;
+  gap: var(--col-spacing-2);
+}
+.col-amount-composition .col-row > .col-field {
+  flex: 1;
+}
+.col-amount-composition .col-field > label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}

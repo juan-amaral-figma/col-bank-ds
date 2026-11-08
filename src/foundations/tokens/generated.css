@@ -1,0 +1,67 @@
+/* Generated from figma/tokens.json. Run npm run tokens. */
+:root, .col-theme {
+  --col-yellow-500: #ffcf24;
+  --col-yellow-100: #fff3bf;
+  --col-yellow-700: #cc9f00;
+  --col-neutral-900: #202020;
+  --col-neutral-0: #ffffff;
+  --col-neutral-100: #f5f5f5;
+  --col-neutral-300: #d9d9d9;
+  --col-neutral-600: #686868;
+  --col-green-500: #147d64;
+  --col-red-500: #c63d3d;
+  --col-spacing-1: 4px;
+  --col-spacing-2: 8px;
+  --col-spacing-3: 12px;
+  --col-spacing-4: 16px;
+  --col-spacing-5: 20px;
+  --col-spacing-6: 24px;
+  --col-spacing-8: 32px;
+  --col-radius-none: 0px;
+  --col-radius-sm: 4px;
+  --col-radius-md: 8px;
+  --col-radius-lg: 12px;
+  --col-radius-xl: 16px;
+  --col-radius-2xl: 24px;
+  --col-font-family: Inter, system-ui, -apple-system, sans-serif;
+  --col-text-primary: #202020;
+  --col-text-secondary: #686868;
+  --col-text-inverse: #ffffff;
+  --col-brand-primary: #ffcf24;
+  --col-surface-primary: #ffffff;
+  --col-surface-secondary: #f5f5f5;
+  --col-surface-brand: #ffcf24;
+  --col-border-primary: #d9d9d9;
+  --col-status-success: #147d64;
+  --col-status-error: #c63d3d;
+  --col-text-on-brand: #202020;
+  color-scheme: light;
+}
+[data-theme="light"] {
+  --col-text-primary: #202020;
+  --col-text-secondary: #686868;
+  --col-text-inverse: #ffffff;
+  --col-brand-primary: #ffcf24;
+  --col-surface-primary: #ffffff;
+  --col-surface-secondary: #f5f5f5;
+  --col-surface-brand: #ffcf24;
+  --col-border-primary: #d9d9d9;
+  --col-status-success: #147d64;
+  --col-status-error: #c63d3d;
+  --col-text-on-brand: #202020;
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --col-text-primary: #ffffff;
+  --col-text-secondary: #d9d9d9;
+  --col-text-inverse: #202020;
+  --col-brand-primary: #ffcf24;
+  --col-surface-primary: #202020;
+  --col-surface-secondary: #686868;
+  --col-surface-brand: #ffcf24;
+  --col-border-primary: #686868;
+  --col-status-success: #147d64;
+  --col-status-error: #c63d3d;
+  --col-text-on-brand: #202020;
+  color-scheme: dark;
+}

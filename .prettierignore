@@ -1,0 +1,8 @@
+node_modules
+dist
+storybook-static
+package-lock.json
+src/components/atoms/Icon/assets
+src/foundations/tokens
+figma/tokens.json
+tests/fixtures/figma-components.json

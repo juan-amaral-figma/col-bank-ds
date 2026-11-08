@@ -1,0 +1,70 @@
+.col-recipient-radio {
+  appearance: none;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  border: 1px solid var(--col-text-primary);
+  background: var(--col-surface-primary);
+  cursor: inherit;
+}
+.col-recipient-radio {
+  border-radius: 50%;
+}
+.col-recipient-radio:checked {
+  background: var(--col-surface-brand);
+}
+.col-recipient-radio:disabled {
+  border-color: var(--col-border-primary);
+  background: var(--col-surface-secondary);
+}
+.col-recipient-radio:checked {
+  box-shadow: inset 0 0 0 6px var(--col-surface-brand);
+  background: var(--col-text-on-brand);
+}
+.col-recipient-card {
+  color: var(--col-text-primary);
+  background: var(--col-surface-primary);
+  border: 1px solid var(--col-border-primary);
+  border-radius: var(--col-radius-lg);
+  padding: var(--col-spacing-4);
+  max-width: 100%;
+  font: 400 16px/24px var(--col-font-family);
+}
+.col-recipient-card {
+  display: flex;
+  align-items: center;
+  gap: var(--col-spacing-3);
+  width: 400px;
+  cursor: pointer;
+  position: relative;
+}
+.col-recipient-card[data-selected],
+.col-recipient-card:has(input:checked) {
+  border-color: var(--col-brand-primary);
+  box-shadow: inset 0 0 0 1px var(--col-brand-primary);
+}
+.col-recipient-card:has(input:focus-visible) {
+  outline: 2px solid var(--col-text-primary);
+  outline-offset: 3px;
+}
+.col-recipient-card[data-disabled] {
+  cursor: not-allowed;
+  color: var(--col-text-secondary);
+}
+.col-recipient-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.col-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--col-surface-secondary);
+  border-radius: var(--col-radius-2xl);
+  width: 48px;
+  height: 48px;
+  flex: none;
+}

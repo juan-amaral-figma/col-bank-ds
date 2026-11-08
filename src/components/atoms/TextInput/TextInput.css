@@ -1,0 +1,57 @@
+.col-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--col-spacing-2);
+  width: 300px;
+  max-width: 100%;
+  min-width: 0;
+  color: var(--col-text-primary);
+}
+.col-input-shell {
+  display: flex;
+  align-items: center;
+  gap: var(--col-spacing-2);
+  min-height: 48px;
+  width: 100%;
+  min-width: 0;
+  padding: 0 var(--col-spacing-3);
+  border: 1px solid var(--col-border-primary);
+  border-radius: var(--col-radius-md);
+  background: var(--col-surface-primary);
+}
+.col-input-shell input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--col-text-primary);
+  font: 400 16px/24px var(--col-font-family);
+  outline: none;
+  padding: 0;
+  height: 46px;
+}
+.col-input-shell input::placeholder {
+  color: var(--col-text-secondary);
+  opacity: 1;
+}
+.col-input-shell:focus-within {
+  border-color: var(--col-brand-primary);
+  box-shadow: 0 0 0 1px var(--col-brand-primary);
+}
+.col-input-shell:has(input:focus-visible) {
+  outline: 2px solid var(--col-text-primary);
+  outline-offset: 3px;
+}
+.col-field[data-error] .col-input-shell {
+  border-color: var(--col-status-error);
+}
+.col-field[data-error] .col-input-shell:focus-within {
+  box-shadow: 0 0 0 1px var(--col-status-error);
+}
+.col-field[data-disabled] .col-input-shell {
+  background: var(--col-surface-secondary);
+}
+.col-field[data-disabled] input {
+  cursor: not-allowed;
+  color: var(--col-text-secondary);
+}

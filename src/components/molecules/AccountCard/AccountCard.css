@@ -1,0 +1,15 @@
+.col-account-card {
+  color: var(--col-text-primary);
+  background: var(--col-surface-primary);
+  border: 1px solid var(--col-border-primary);
+  border-radius: var(--col-radius-lg);
+  padding: var(--col-spacing-4);
+  max-width: 100%;
+  font: 400 16px/24px var(--col-font-family);
+}
+.col-account-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--col-spacing-4);
+  width: 368px;
+}

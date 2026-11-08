@@ -1,0 +1,25 @@
+:where([class^='col-'], [class*=' col-']),
+:where([class^='col-'], [class*=' col-']) * {
+  box-sizing: border-box;
+}
+:where(.col-theme, .col-panel, .col-account-card) :where(h1, h2, h3, p) {
+  margin: 0;
+}
+:where(
+  .col-button,
+  .col-quick-action,
+  .col-input-shell input,
+  .col-choice,
+  .col-recipient-card
+) {
+  font-family: var(--col-font-family);
+}
+:where(
+  .col-button,
+  .col-quick-action,
+  .col-choice input,
+  .col-recipient-radio
+):focus-visible {
+  outline: 2px solid var(--col-text-primary);
+  outline-offset: 3px;
+}
