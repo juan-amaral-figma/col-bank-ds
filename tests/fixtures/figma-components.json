@@ -44,10 +44,6 @@
     "source": "src/components/atoms/IconButton/IconButton.tsx",
     "properties": [
       {
-        "name": "Ícono",
-        "type": "INSTANCE_SWAP"
-      },
-      {
         "name": "Estado",
         "type": "VARIANT",
         "variantOptions": [
