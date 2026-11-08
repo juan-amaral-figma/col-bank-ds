@@ -7,7 +7,7 @@ const instance = figma.selectedInstance;
 // Review the accessible label for the action in its product context.
 const size = instance.getEnum('Tamaño', { 'Pequeño': 'sm', 'Mediano': 'md' });
 const state = instance.getEnum('Estado', { 'Predeterminado': 'default', 'Deshabilitado': 'disabled' });
-const iconInstance = instance.getInstanceSwap('Ícono');
+const iconInstance = instance.findInstance('Ícono');
 const iconResult =
   iconInstance && iconInstance.type === 'INSTANCE' ? iconInstance.executeTemplate() : undefined;
 const iconCode = iconResult?.example;

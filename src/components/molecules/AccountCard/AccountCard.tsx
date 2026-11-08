@@ -19,6 +19,7 @@ export function AccountCard({
   visibilityButton,
   divider,
   className,
+  children,
   ...props
 }: AccountCardProps) {
   const [hidden, setHidden] = useControllable(
@@ -40,7 +41,7 @@ export function AccountCard({
         </div>
         {visibilityButton ?? (
           <IconButton
-            icon={<Icon name="eye" />}
+            icon={<Icon name={hidden ? 'eye-off' : 'eye'} />}
             aria-label={hidden ? showBalanceLabel : hideBalanceLabel}
             aria-pressed={!hidden}
             onClick={() => setHidden(!hidden)}
@@ -54,6 +55,7 @@ export function AccountCard({
           {hidden ? <span aria-label="••••">••••••</span> : balance}
         </div>
       </div>
+      <div className="col-account-card__content">{children}</div>
     </article>
   );
 }

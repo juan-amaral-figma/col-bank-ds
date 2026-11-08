@@ -13,3 +13,12 @@
   gap: var(--col-spacing-4);
   width: 368px;
 }
+
+.col-account-card__content:empty {
+  display: none;
+}
+.col-account-card__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--col-spacing-2);
+}

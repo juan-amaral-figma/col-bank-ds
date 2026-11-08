@@ -1,0 +1,13 @@
+.col-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--col-spacing-2);
+  padding: var(--col-spacing-3);
+  border: 1px solid var(--col-border-primary);
+  border-radius: var(--col-radius-md);
+  background: var(--col-surface-secondary);
+  color: var(--col-text-primary);
+  font: 400 14px/20px var(--col-font-family);
+  overflow-wrap: anywhere;
+  width: 100%;
+}

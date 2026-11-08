@@ -1,0 +1,33 @@
+{
+  "name": "@col-bank/angular",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "scripts": {
+    "build": "ngc -p tsconfig.json && node scripts/copy-assets.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@angular/core": "^21.2.0",
+    "rxjs": "^7.8.0"
+  },
+  "devDependencies": {
+    "@angular/compiler": "21.2.26",
+    "@angular/compiler-cli": "21.2.26",
+    "@angular/core": "21.2.26",
+    "@angular/platform-browser": "21.2.26",
+    "jsdom": "^30.1.0",
+    "rxjs": "^7.8.2",
+    "typescript": "~5.9.3"
+  }
+}

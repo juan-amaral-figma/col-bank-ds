@@ -1,3 +1,5 @@
+import eyeOff from './assets/eye-off.svg';
+import info from './assets/info.svg';
 import home from './assets/home.svg';
 import transfer from './assets/transfer.svg';
 import wallet from './assets/wallet.svg';
@@ -19,5 +21,8 @@ export const iconAssets = {
   check: check,
   close: close,
   eye: eye,
+  'eye-off': eyeOff,
+  payment: credit_card,
+  info,
 } as const;
 export type IconName = keyof typeof iconAssets;

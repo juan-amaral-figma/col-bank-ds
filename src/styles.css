@@ -25,3 +25,4 @@
 @import './components/organisms/RecipientSelector/RecipientSelector.css';
 @import './components/organisms/TransferForm/TransferForm.css';
 @import './components/organisms/_shared/Panel/Panel.css';
+@import './components/molecules/Alert/Alert.css';

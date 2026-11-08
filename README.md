@@ -40,6 +40,14 @@ tests/                # Setup e contratos do Figma usados pelos testes
 
 Cada componente tem sua própria pasta com implementação, tipos, CSS, story, template `Nome.figma.ts` e `index.ts`. Os testes de interação existentes ficam junto dos componentes. Os contratos em `tests/fixtures/figma-components.json` verificam nomes de propriedades, variantes e imports dos templates; são uma referência capturada, não uma consulta ao Figma em tempo real.
 
+## Componentes Angular e composição
+
+A pasta [`angular/`](angular/README.md) contém somente cinco componentes standalone e mantém dependências, configuração e build separados do React. Consulte seu README para compilar e consumir a biblioteca.
+
+Nas duas implementações, AccountCard aceita conteúdo externo abaixo do saldo: `children` no React e projeção no Angular. A região vazia não ocupa espaço. O React preserva estado controlado, callbacks e slots existentes; o botão padrão alterna `eye`/`eye-off` e o nome acessível conforme a ação disponível. Passe `accountNumber` já mascarado, como `•••• 4582`.
+
+O novo `Alert` React recebe `message` e `icon` opcional (`info` por padrão). Button já aceita texto e ícone opcional; IconButton continua exigindo `aria-label`. Os nomes `eye-off`, `payment` e `info` foram adicionados sem remover os existentes; `payment` reutiliza o asset de cartão.
+
 ## Code Connect
 
 Os 20 templates `src/components/**/*.figma.ts` definem os links para os componentes do Figma e os exemplos de código. Mantenha `FIGMA_ACCESS_TOKEN` no `.env` local, usando `.env.example` como referência. O CLI lê esse arquivo; ele está ignorado pelo Git.
