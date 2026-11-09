@@ -198,7 +198,10 @@
           "Flecha",
           "Marca de verificación",
           "Cerrar",
-          "Ojo"
+          "Ojo",
+          "Ojo cerrado",
+          "Pago",
+          "Información"
         ]
       }
     ],
@@ -240,6 +243,10 @@
         "type": "TEXT"
       },
       {
+        "name": "Contenido",
+        "type": "SLOT"
+      },
+      {
         "name": "Estado",
         "type": "VARIANT",
         "variantOptions": [
@@ -255,6 +262,21 @@
     ],
     "figmaName": "TarjetaDeCuenta",
     "nodeId": "44:552"
+  },
+  {
+    "name": "Alert",
+    "source": "src/components/molecules/Alert/Alert.tsx",
+    "properties": [
+      {
+        "name": "Mensaje",
+        "type": "TEXT"
+      }
+    ],
+    "dependencies": [
+      "Icon"
+    ],
+    "figmaName": "Alerta",
+    "nodeId": "274:497"
   },
   {
     "name": "TransactionItem",

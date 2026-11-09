@@ -8,7 +8,10 @@ const instance = figma.selectedInstance;
 const accountType = instance.getString('Tipo de cuenta');
 const accountNumber = instance.getString('Número de cuenta');
 const balance = instance.getString('Saldo');
-const balanceHidden = instance.getEnum('Estado', { 'Predeterminado': false, 'Saldo oculto': true });
+const balanceHidden = instance.getEnum('Estado', { Predeterminado: false, 'Saldo oculto': true });
+const slot = instance.getSlot('Contenido');
+const children = slot?.connectedInstances.map((child) => child.executeTemplate().example) ?? [];
+const content = children.flat();
 const balanceLabelLayer = instance.findText('Etiqueta del saldo');
 const balanceLabel = balanceLabelLayer.type === 'TEXT' ? balanceLabelLayer.textContent : undefined;
 const iconInstance = instance.findInstance('Ícono');
@@ -37,8 +40,12 @@ export default {
     ${iconCode ? figma.code`icon={${iconCode}}` : ''}
     ${visibilityButtonCode ? figma.code`visibilityButton={${visibilityButtonCode}}` : ''}
     ${dividerCode ? figma.code`divider={${dividerCode}}` : ''}
-  />`,
-  imports: ['import { AccountCard, Icon, IconButton, Divider } from "@col-bank/react"'],
+  >
+    ${content}
+  </AccountCard>`,
+  imports: [
+    'import { AccountCard, Icon, IconButton, Divider, Alert, Button } from "@col-bank/react"',
+  ],
   id: 'AccountCard',
   metadata: { nestable: true },
 };

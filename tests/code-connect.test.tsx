@@ -27,6 +27,7 @@ const getterTypes: Record<string, string> = {
   getBoolean: 'BOOLEAN',
   getInstanceSwap: 'INSTANCE_SWAP',
   getEnum: 'VARIANT',
+  getSlot: 'SLOT',
 };
 
 function dependencyNames(name: string, seen = new Set<string>()): Set<string> {

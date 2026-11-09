@@ -6,16 +6,19 @@ import figma from 'figma';
 const instance = figma.selectedInstance;
 
 const name = instance.getEnum('Nombre', {
-  'Inicio': 'home',
-  'Transferencia': 'transfer',
-  'Billetera': 'wallet',
+  Inicio: 'home',
+  Transferencia: 'transfer',
+  Billetera: 'wallet',
   'Tarjeta de crédito': 'credit-card',
-  'Buscar': 'search',
-  'Notificación': 'notification',
-  'Flecha': 'arrow',
+  Buscar: 'search',
+  Notificación: 'notification',
+  Flecha: 'arrow',
   'Marca de verificación': 'check',
-  'Cerrar': 'close',
-  'Ojo': 'eye',
+  Cerrar: 'close',
+  Ojo: 'eye',
+  'Ojo cerrado': 'eye-off',
+  Pago: 'payment',
+  Información: 'info',
 });
 
 export default {
