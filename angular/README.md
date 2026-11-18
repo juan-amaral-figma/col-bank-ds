@@ -14,6 +14,45 @@ O pacote usa Angular 21.2 e TypeScript 5.9 isolados do React. `ngc` compila com 
 
 O build reutiliza os tokens CSS gerados e apenas CSS/SVGs neutros do repositório. Após alterar o snapshot de tokens, execute `npm run tokens` na raiz antes do build Angular. Não é necessário compilar React. Os temas seguem os seletores `data-theme` dos tokens existentes. Carregue Inter ou personalize `--col-font-family` no consumidor.
 
+## Organização
+
+```text
+src/
+  AccountCard/account-card.ts
+  Alert/alert.ts
+  Button/button.ts
+  IconButton/icon-button.ts
+  Icon/
+    icon.ts
+    Icon.figma.ts
+  index.ts
+```
+
+A entrada pública continua sendo `dist/index.js`. O build limpa a saída anterior antes de compilar, evitando módulos obsoletos após movimentações. Os SVGs permanecem em `dist/assets/`; `dist/Icon/icon.js` os referencia por `../assets/`.
+
+Os templates `.figma.ts` são excluídos da compilação da biblioteca Angular. O Code Connect os encontra separadamente por `src/**/*.figma.ts`, com label `Angular` e language `html`.
+
+## Code Connect
+
+Existem cinco templates: `Icon`, `Button`, `IconButton`, `Alert` e `AccountCard`. Instale as dependências na raiz do repositório (`npm ci`) para disponibilizar o CLI e os tipos de `@figma/code-connect`, além das dependências Angular instaladas nesta pasta.
+
+Execute a partir de `angular/`:
+
+```sh
+../node_modules/.bin/figma connect parse --skip-update-check --exit-on-unreadable-files
+node node_modules/typescript/bin/tsc -p src/tsconfig.json
+```
+
+O primeiro comando valida o parse local dos cinco templates usando `angular/figma.config.json`. O segundo verifica os tipos dos fontes e templates no projeto do editor (`src/tsconfig.json`), sem emitir arquivos; o build mantém seu próprio `tsconfig.json`.
+
+Quando for publicar, configure `FIGMA_ACCESS_TOKEN` no `.env` local desta pasta, seguindo `.env.example`, e execute explicitamente:
+
+```sh
+../node_modules/.bin/figma connect publish
+```
+
+O parse local não verifica os componentes ou as propriedades atuais no Figma nem confirma uma publicação. Após publicar, confira o label `Angular` no Dev Mode; a configuração React da raiz usa o label `React` separadamente.
+
 ## API
 
 Importe os componentes de `@col-bank/angular` e inclua-os em `imports` do consumidor standalone.

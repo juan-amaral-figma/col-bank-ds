@@ -14,7 +14,7 @@
     "./styles.css": "./dist/styles.css"
   },
   "scripts": {
-    "build": "ngc -p tsconfig.json && node scripts/copy-assets.mjs",
+    "build": "node scripts/clean.mjs && ngc -p tsconfig.json && node scripts/copy-assets.mjs",
     "test": "npm run build && node --test tests/*.test.mjs"
   },
   "peerDependencies": {

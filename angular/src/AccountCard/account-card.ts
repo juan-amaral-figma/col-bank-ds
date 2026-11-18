@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Icon } from './icon.js';
-import { IconButton } from './icon-button.js';
+import { Icon } from '../Icon/icon.js';
+import { IconButton } from '../IconButton/icon-button.js';
 
 @Component({
   selector: 'col-account-card',

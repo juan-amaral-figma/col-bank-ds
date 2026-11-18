@@ -1,5 +1,5 @@
 import { booleanAttribute, Component, Input } from '@angular/core';
-import { Icon, type IconName } from './icon.js';
+import { Icon, type IconName } from '../Icon/icon.js';
 
 @Component({
   selector: 'button[colButton]',

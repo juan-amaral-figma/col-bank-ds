@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Button } from './button.js';
-import { Icon, type IconName } from './icon.js';
+import { Button } from '../Button/button.js';
+import { Icon, type IconName } from '../Icon/icon.js';
 
 @Component({
   selector: 'button[colIconButton]',

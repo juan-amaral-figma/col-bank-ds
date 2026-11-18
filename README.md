@@ -1,6 +1,6 @@
 # Col Bank
 
-Design system em React + TypeScript, com 20 componentes ligados ao [arquivo COL-BANK no Figma](https://www.figma.com/design/vLy0B4TiccE51qO2z2Sek3/COL-BANK?node-id=0-1) pelo Code Connect.
+Design system em React + TypeScript, com 21 componentes e templates de Code Connect para o [arquivo COL-BANK no Figma](https://www.figma.com/design/vLy0B4TiccE51qO2z2Sek3/COL-BANK?node-id=0-1).
 
 **Contrato bilíngue:** componentes, variantes, propriedades e variáveis são nomeados em espanhol no Figma (`Botón`, `Jerarquía`, `Primario`, `amarillo/500`). A API React e os tokens CSS mantêm nomes em inglês (`Button`, `hierarchy="primary"`, `--col-yellow-500`). Os templates `.figma.ts` fazem a tradução explícita. Não renomeie as propriedades no Figma apenas para corresponder ao código.
 
@@ -50,15 +50,17 @@ O novo `Alert` React recebe `message` e `icon` opcional (`info` por padrão). Bu
 
 ## Code Connect
 
-Os 20 templates `src/components/**/*.figma.ts` definem os links para os componentes do Figma e os exemplos de código. Mantenha `FIGMA_ACCESS_TOKEN` no `.env` local, usando `.env.example` como referência. O CLI lê esse arquivo; ele está ignorado pelo Git.
+Os 21 templates `src/components/**/*.figma.ts` definem os links para os componentes do Figma e os exemplos de código. A configuração da raiz inclui somente `src/**/*.figma.ts`, com label `React` e language `tsx`; os cinco templates Angular usam uma configuração separada em [`angular/figma.config.json`](angular/figma.config.json), com label `Angular` e language `html`. Mantenha `FIGMA_ACCESS_TOKEN` no `.env` local, usando `.env.example` como referência. O CLI lê esse arquivo; ele está ignorado pelo Git.
 
 ```sh
-npm run figma:parse       # Analisa os templates localmente
-npm run figma:publish -- --dry-run   # Mostra os 20 destinos; exige token
+npm run figma:parse -- --skip-update-check --exit-on-unreadable-files  # Analisa os 21 templates React localmente
+npm run figma:publish -- --dry-run   # Mostra os 21 destinos React; exige token
 npm run figma:publish     # Valida e publica as conexões no Figma
 ```
 
 A publicação exige acesso ao arquivo e os escopos necessários no token. **Antes de publicar, verifique que o preview utiliza `@col-bank/react` e que nenhum valor aparece como `PROPERTY_NOT_FOUND`.** Se o CLI avisar sobre mappings criados pela interface, use `npm run figma:publish -- --force` somente quando quiser substituí-los pelos templates deste repositório. A execução com `--dry-run` não substitui a verificação no Dev Mode após publicar.
+
+Consulte o [README Angular](angular/README.md#code-connect) para validar e publicar somente os templates Angular. Execute os comandos de cada framework na pasta correspondente. O parse local não confirma o estado publicado, os nomes atuais das propriedades no Figma ou a conexão MCP; confira os dois labels no Dev Mode e a conexão MCP no cliente usado no workshop.
 
 Code Connect fornece exemplos no Dev Mode. Alterações em componentes React e no design do Figma precisam ser mantidas em conjunto; a publicação não sincroniza o visual automaticamente.
 
@@ -94,4 +96,5 @@ export function App() {
 ```
 
 O pacote suporta React 18.3 e 19. O Storybook carrega Inter; nos projetos consumidores, carregue a fonte ou personalize `--col-font-family`.
+
 # col-bank-ds

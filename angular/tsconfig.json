@@ -16,5 +16,6 @@
     "strictTemplates": true,
     "compilationMode": "partial"
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.figma.ts"]
 }
